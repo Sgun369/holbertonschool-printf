@@ -10,3 +10,14 @@ int _putchar(char c)
 {
     return (write(1, &c, 1));
 }
+
+
+
+int _puts(char *str)
+{
+    char *a = str;
+
+    while(*str)
+        _putchar(*str++);
+    return(str - a);
+}
