@@ -19,8 +19,8 @@ int _printf(const char *format, ...)
 			{
 				case 'c':
 				{
-					char* x = va_arg(args, char *);
-					_puts(x);
+					char x = va_arg(args, int);
+					_putchar(x);
 					len++;	
 					break;
 				}
