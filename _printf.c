@@ -10,33 +10,15 @@ int _printf(const char *format, ...)
 	int len = 0;
 	int i = 0;
 
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
+	
+
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
-			i++;
-			switch (format[i])
-			{
-				case 'c':
-				{
-					char x = va_arg(args, int);
-					_putchar(x);
-					len++;	
-					break;
-				}
-				case 's':
-				{
-					char *x = va_arg(args, char *);
-					len += _puts(x);
-					break;
-				}
-				case '%':
-				{
-					_putchar('%');
-					len++;
-					break;	
-				}
-			}
+			
 		}
 		else
 		{
