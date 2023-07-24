@@ -30,6 +30,12 @@ int _printf(const char *format, ...)
 					len += _puts(x);
 					break;
 				}
+				case '%':
+				{
+					_putchar('%');
+					len++;
+					break;	
+				}
 			}
 		}
 		else

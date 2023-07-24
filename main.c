@@ -15,5 +15,6 @@ int main(void)
 	len1 = _printf("String:[%s]\n", "I am a string !");
 	len2 = printf("String:[%s]\n", "I am a string !");
 	printf("%d  %d\n", len1, len2);
+	printf("%%\n");
 	return (0);
 }
