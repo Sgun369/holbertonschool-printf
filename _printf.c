@@ -19,14 +19,14 @@ int _printf(const char *format, ...)
 			{
 				case 'c':
 				{
-					char x = va_arg(args, int);
-					_puts(&x);
+					char* x = va_arg(args, char *);
+					_puts(x);
 					len++;	
 					break;
 				}
 				case 's':
 				{
-					char *x = va_arg(args, char*);
+					char *x = va_arg(args, char *);
 					len += _puts(x);
 					break;
 				}
@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			_puts(format[i]);
+			_putchar(format[i]);
 			len++;
 		}
 		i++;
