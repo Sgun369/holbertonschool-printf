@@ -18,7 +18,14 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			
+			i++;
+			switch (format[i])
+			{
+				case 'c';
+				{
+					
+				}
+			}
 		}
 		else
 		{
