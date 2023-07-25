@@ -14,11 +14,19 @@ int _putchar(char c)
 
 
 
-int _puts(char *str)
+/**
+ * print_char - print character
+ * @args: Va_list containing the string or char to print as the next element.
+ * Return: success 1
+ */
+int print_char(va_list args)
 {
-	char *a = str;
+	char c = va_arg(args, int);
+	int ret;
+	
+	ret = _putchar(c);
+	if (ret == -1)
+		return (-1);
 
-	while(*str)
-		_putchar(*str++);
-	return(str - a);
+	return (1);
 }

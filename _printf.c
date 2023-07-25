@@ -8,36 +8,50 @@ int _printf(const char *format, ...)
 	va_list args;
 	va_start(args, format);
 	int (*f)(va_list) = NULL;
-	int len;
 	int i;
+
+	i = 0;
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	
 
-	while (format[i])
+	while (*format)
 	{
-		if (format[i] == '%')
+		if (*format == '%' && *(format + 1) != '%')
 		{
-			i++;
-			switch (format[i])
+			format++;
+			f = get_func(format);
+
+			if (*format == '\0')
+				return (-1);
+			
+			else if (function == NULL)
 			{
-				case 'c';
-				{
-					
-				}
+				_putchar(*(format - 1));
+				_putchar(*format);
+				i += 2;
 			}
+			else
+				i += function(args);
+
+		}
+		else if (*format == '%' && *(format + 1) == '%')
+		{
+			format++;
+			_putchar('%');
+			i++;
 		}
 		else
 		{
-			_putchar(format[i]);
-			len++;
+			_putchar(*format);
+			i++;
 		}
-		i++;
+		format++;
 	}
 
 	va_end(args);
-	return (len);
+	return (i);
 }
 
 
