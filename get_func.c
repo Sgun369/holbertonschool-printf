@@ -9,21 +9,19 @@
  */
 
 
-int (*get_func(char ch)(va_list))
+int (*get_func(char *ch)(va_list))
 {
-    int index = 0;
+    int index;
     pros_f print_op[] = {
         {'c', print_char},
         {'s', print_string},
-        {NULL, NULL}
+        {'%', print_percent},
+        {NULL, NULL},
     };
-    while (print_op[index].op)
+    for (index = 0; print_op[index].op; index++)
     {
-        if (ch == print_op[index].op)
-        {
-            return(print_op[index].f);
-        }
-        index++;
+        if (*ch == print_op[index].op)
+            return (print_op[index].f);
     }
     return (NULL);
 }

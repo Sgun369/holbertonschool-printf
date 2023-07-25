@@ -2,7 +2,14 @@
 #define MAIN_H
 #include <unistd.h>
 #include <stdarg.h>
+#include <stdlib.h>
+#include "main.h"
 
+/**
+ * struct holberton - connect conversion specifier w/ correct print function.
+ * @f: a function pointer to the print functions.
+ * @op: the conversion specifier.
+ */
 
 typedef struct pros 
 {
@@ -10,8 +17,11 @@ typedef struct pros
     int (*f)(va_list);
 }pros_f;
 
-int _putchar(char c);
-int _puts(char *str);
 int _printf(const char *format, ...);
+int _putchar(char c);
+int print_char(va_list args);
+int print_string(va_list args);
+int print_percent(va_list args);
+
 
 #endif

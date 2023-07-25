@@ -5,9 +5,9 @@
 
 int _printf(const char *format, ...)
 {
+	int (*function)(va_list) = NULL;
 	va_list args;
 	va_start(args, format);
-	int (*f)(va_list) = NULL;
 	int i;
 
 	i = 0;
@@ -21,9 +21,9 @@ int _printf(const char *format, ...)
 		if (*format == '%' && *(format + 1) != '%')
 		{
 			format++;
-			f = get_func(format);
+			function = get_func(format);
 
-			if (*format == '\0')
+			if (*(format) == '\0')
 				return (-1);
 			
 			else if (function == NULL)
