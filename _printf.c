@@ -7,6 +7,7 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	va_start(args, format);
+	int (*f)(va_list) = NULL;
 	int len;
 	int i;
 

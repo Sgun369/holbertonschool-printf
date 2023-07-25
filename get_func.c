@@ -1,6 +1,12 @@
 #include "main.h"
 
-
+/**
+ * get_function - determine which print function to use.
+ *
+ * @ch: The character that identifies the type of the variable to print.
+ *
+ * Return: pointer to the matching print function.
+ */
 
 
 int (*get_func(char ch)(va_list))
