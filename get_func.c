@@ -14,9 +14,9 @@ int (*get_func(char *ch)(va_list))
 	int index;
 
 	pros_f print_op[] = {
-		{'c', print_char},
-		{'s', print_string},
-		{'%', print_percent},
+		{"c", print_char},
+		{"s", print_string},
+		{"%", print_percent},
 		{NULL, NULL}
 	};
 
