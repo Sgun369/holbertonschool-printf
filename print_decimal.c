@@ -29,5 +29,5 @@ int print_decimal(va_list args)
 		account += _putchar(((name / number) % 10) + '0');
 		number /= 10;
 	}
-	return (account);
+	return (accoun);
 }
