@@ -4,11 +4,12 @@
  * @num: number to print
  * Return: nember lenth
  */
-int print_number(int num)
+int print_number(va_list arg)
 {
 	char buffer[20];
-	int len = 0;
+	int len = 0, num, i;
 
+	num = va_arg(arg, int);
 	if (num < 0)
 	{
 		putchar('-');
@@ -19,7 +20,7 @@ int print_number(int num)
 		num /= 10;
 	} while (num > 0);
 
-	for (int i = len - 1; i >= 0; i--)
+	for (i = len - 1; i >= 0; i--)
 		putchar(buffer[i]);
 	return (len);
 }
