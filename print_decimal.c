@@ -6,31 +6,26 @@
  */
 int print_decimal(va_list args)
 {
-	int reverse = 0;
-	long int number = va_arg(args, int);
-	int length = 0;
+	unsigned int tmp;
+	int number = va_arg(args, int);
+	int d, len;
 
-	if (number == 0)
-	{
-		_putchar('0');
-		return (1);
-	}
 	if (number < 0)
 	{
 		_putchar('-');
-		number = -number;
-		length++;
+		tmp = -number;
+		len++;
 	}
-	while (number > 0)
+	while (tmp / d > 9)
 	{
-		reverse = reverse * 10 + number % 10;
-		number /= 10;
-		length++;
-	}
-	while (reverse > 0)
+		d *= 10;
+	} 
+	while (d != 0)
 	{
-		_putchar(reverse % 10 + '0');
-		reverse /= 10;
+		_putchar(tmp / d + '0');
+		tmp %= d;
+		len++;
+		d /= 10;
 	}
-	return (length);
+	return (len);
 }
