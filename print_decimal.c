@@ -12,12 +12,12 @@ int print_decimal(va_list args)
 
 	if (number == 0)
 	{
-		putchar('0');
+		_putchar('0');
 		return (1);
 	}
 	if (number < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		number = -number;
 		length++;
 	}
@@ -29,7 +29,7 @@ int print_decimal(va_list args)
 	}
 	while (reverse > 0)
 	{
-		putchar(reverse % 10 + '0');
+		_putchar(reverse % 10 + '0');
 		reverse /= 10;
 	}
 	return (length);
