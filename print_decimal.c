@@ -7,6 +7,7 @@
  */
 int print_decimal(va_list args)
 {
+	int reverse = 0;
 	int number = va_arg(args, int);
 	int length = 0;
 
@@ -24,7 +25,7 @@ int print_decimal(va_list args)
         length++;
     }
 
-    int reverse = 0;
+    
     while (number > 0) 
 	{
         reverse = reverse * 10 + number % 10;
@@ -38,5 +39,5 @@ int print_decimal(va_list args)
         reverse /= 10;
     }
 
-    return length;
+    return (length);
 }
