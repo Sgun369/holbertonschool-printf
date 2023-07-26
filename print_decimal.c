@@ -7,7 +7,7 @@
 int print_decimal(va_list args)
 {
 	int reverse = 0;
-	int number = va_arg(args, int);
+	long int number = va_arg(args, int);
 	int length = 0;
 
 	if (number == 0)
