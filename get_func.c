@@ -17,7 +17,7 @@ int (*get_func(char *ch)(va_list))
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
-		{NULL, NULL}
+		{NULL, NULL},
 	};
 
 	for (index = 0; print_op[index].op; index++)
