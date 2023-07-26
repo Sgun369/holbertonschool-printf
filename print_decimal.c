@@ -1,9 +1,8 @@
 #include "main.h"
 /**
- * print_number - print number
- * @args: number to print
  * print_decimal - prints a decimal.
- * Return: nember
+ * @args: number to print
+ * Return: length of number.
  */
 int print_decimal(va_list args)
 {
