@@ -8,25 +8,29 @@ int _printf(const char *format, ...)
 {
 	int i = 0;
 	va_list args;
-	va_start(args, format);
+	int (*function)(va_list) = NULL;
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
+	va_start(args, format);
 	while (*format)
 	{
 		if (*format == '%')
 		{
-			int (*function)(va_list) = NULL;
-
 			format++;
-			function = get_func(*format);
-			if (*format == '\0') return (-1);
+			function = get_func(format);
+			if (*(format) == '\0')
+				return (-1);
 			else if (function == NULL)
 			{
-				i += _putchar(*(format - 1));
-				i += _putchar(*format);
+				_putchar(*(format - 1));
+				_putchar(*format);
+				i += 2;
 			}
-			else i += function(args);
+			else
+			{
+				i += function(args);
+			}
 		}
 		else
 			i += _putchar(*format);

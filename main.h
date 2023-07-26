@@ -17,13 +17,12 @@ typedef struct pros
     char *op;
     int (*f)(va_list);
 }pros_f;
-
 int _printf(const char *format, ...);
 int _putchar(char c);
 int print_char(va_list args);
 int print_string(va_list args);
 int print_percent(va_list args);
-int (*get_func(char ch))(va_list);
+int (*get_func(const char *ch))(va_list args);
 
 
 #endif

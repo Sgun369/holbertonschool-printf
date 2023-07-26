@@ -9,7 +9,7 @@
  */
 
 
-int (*get_func(char ch))(va_list)
+int (*get_func(const char *ch))(va_list args)
 {
 	int index;
 
@@ -22,7 +22,7 @@ int (*get_func(char ch))(va_list)
 
 	for (index = 0; print_op[index].op; index++)
 	{
-		if (*ch == print_op[index].op)
+		if (*print_op[index].op == *ch)
 			return (print_op[index].f);
 	}
 	return (NULL);
