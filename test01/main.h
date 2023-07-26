@@ -22,10 +22,7 @@ int _putchar(char c);
 int print_char(va_list args);
 int print_string(va_list args);
 int print_percent(va_list args);
-<<<<<<< HEAD
-=======
 int (*get_func(char ch))(va_list);
->>>>>>> origin/sou
 
 
 #endif
