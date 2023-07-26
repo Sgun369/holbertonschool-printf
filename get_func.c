@@ -16,8 +16,8 @@ int (*get_func(const char *ch))(va_list args)
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
-		{"i", print_decimal},
-		{"d", print_integer},
+		{"d", print_decimal},
+		{"i", print_integer},
 		{NULL, NULL}
 	};
 
