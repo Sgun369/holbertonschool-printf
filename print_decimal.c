@@ -7,12 +7,16 @@
  */
 int print_decimal(va_list args)
 {
-    if (number == 0) {
+	int number = va_arg(args, int);
+	int length = 0;
+
+    if (number == 0)
+	{
         putchar('0');
         return 1;
     }
 
-    int length = 0;
+   
     if (number < 0) {
         putchar('-');
         number = -number;
