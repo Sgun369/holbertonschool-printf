@@ -8,8 +8,9 @@ int print_decimal(va_list args)
 {
 	unsigned int tmp;
 	int number = va_arg(args, int);
-	int d, len;
+	int d = 1, len = 0;
 
+	tmp = number;
 	if (number < 0)
 	{
 		_putchar('-');
