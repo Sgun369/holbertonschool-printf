@@ -12,8 +12,6 @@ int _putchar(char c)
 	return (1);
 }
 
-
-
 /**
  * print_char - print character
  * @args: Va_list containing the string or char to print as the next element.
