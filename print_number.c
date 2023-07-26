@@ -12,7 +12,7 @@ int print_number(va_list arg)
 	num = va_arg(arg, int);
 	if (num < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		num = -num;
 	}
 	do {
@@ -21,6 +21,6 @@ int print_number(va_list arg)
 	} while (num > 0);
 
 	for (i = len - 1; i >= 0; i--)
-		putchar(buffer[i]);
+		_putchar(buffer[i]);
 	return (len);
 }
