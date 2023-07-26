@@ -6,7 +6,7 @@
  */
 int print_number(int num)
 {
-	char buffer[20]; // Assuming 20 characters is enough for INT_MAX
+	char buffer[20];
 	int len = 0;
 
 	if (num < 0)
@@ -21,5 +21,5 @@ int print_number(int num)
 
 	for (int i = len - 1; i >= 0; i--)
 		putchar(buffer[i]);
-	return (len)
+	return (len);
 }
