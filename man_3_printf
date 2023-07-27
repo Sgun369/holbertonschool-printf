@@ -23,7 +23,6 @@ DESCRIPTION
 
 
 
-
 Return Value
     The _printf function returns the number of characters written to the standard output. In case of an error or invalid input, it returns a negative value.
 
@@ -35,3 +34,10 @@ Format specifiers
     %s String - prints a null-terminated string specified by the corresponding argument.
 
     %d Signed Decimal integer - prints a signed decimal integer specified by the corresponding argument.
+
+
+Authors
+    This custom _printf functions was implemented by [Maaouia Ben Daoued]
+
+SEE ALSO 
+    printf(3)
