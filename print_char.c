@@ -20,11 +20,8 @@ int _putchar(char c)
 int print_char(va_list args)
 {
 	char c = va_arg(args, int);
-	int ret;
 
-	ret = _putchar(c);
-	if (ret == -1)
-		return (-1);
+	_putchar(c);
 
 	return (1);
 }
