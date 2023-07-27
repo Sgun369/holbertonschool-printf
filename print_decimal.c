@@ -20,7 +20,7 @@ int print_decimal(va_list args)
 	while (tmp / d > 9)
 	{
 		d *= 10;
-	} 
+	}
 	while (d != 0)
 	{
 		_putchar(tmp / d + '0');
