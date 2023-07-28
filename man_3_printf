@@ -2,7 +2,7 @@ PRINTF(3)
 
 NAME
 
-    _printf - Custom printf-like function
+    _printf - Custom printf-like original function
 
 
 SYNOPSIS
@@ -33,11 +33,11 @@ Format specifiers
 
     %s String - prints a null-terminated string specified by the corresponding argument.
 
-    %d Signed Decimal integer - prints a signed decimal integer specified by the corresponding argument.
+    %d and %i Signed Decimal integer - prints a signed decimal integer specified by the corresponding argument.
 
 
 Authors
-    This custom _printf functions was implemented by [Maaouia Ben Daoued]
+    This custom _printf functions was implemented by [Maaouia Ben Daoued] 
 
 SEE ALSO
     printf(3)
