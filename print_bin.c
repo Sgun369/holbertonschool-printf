@@ -8,19 +8,17 @@
 
 int print_bin(va_list args)
 {
-	unsigned int tmp, number = va_arg(args, int);
+	unsigned int number = va_arg(args, unsigned int);
 	int d = 1, len = 0;
 
-	tmp = number;
-
-	while (tmp / d > 1)
+    while (number / d > 1)
 	{
 		d *= 2;
 	}
 	while (d != 0)
 	{
-		_putchar(tmp / d + '0');
-		tmp %= d;
+		_putchar(number / d + '0');
+		number %= d;
 		len++;
 		d /= 2;
 	}
