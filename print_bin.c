@@ -9,18 +9,27 @@
 int print_bin(va_list args)
 {
 	unsigned int number = va_arg(args, unsigned int);
-	int d = 1, len = 0;
+	int j, index = 0;
+	char buffer[1024] = {'\0'};
 
-    while (number / d > 1)
+	if (number == 0)
 	{
-		d *= 2;
+		_putchar('0');
+		return (1);
 	}
-	while (d != 0)
+
+    while (number > 0)
 	{
-		_putchar(number / d + '0');
-		number %= d;
-		len++;
-		d /= 2;
+		buffer[index] = number % 2;
+		number /= 2;
+		index++;
 	}
-	return (len);
+	j = i - 1;
+	while (j >= 0)
+	{
+		_putchar(buffer[j] + '0');
+		j--;
+
+	}
+	return (index);
 }
