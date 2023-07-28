@@ -24,7 +24,7 @@ int print_bin(va_list args)
 		number /= 2;
 		index++;
 	}
-	j = i - 1;
+	j = index - 1;
 	while (j >= 0)
 	{
 		_putchar(buffer[j] + '0');
