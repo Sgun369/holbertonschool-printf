@@ -15,9 +15,7 @@ int print_bin(va_list args)
 	tmp = number;
 	if (number < 0)
 	{
-		_putchar('-');
-		tmp = -number;
-		len++;
+		return (-1);
 	}
 	while (tmp / d > 1)
 	{
