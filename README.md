@@ -10,7 +10,7 @@ IT supports a limitrd set of conversion specifiers, such as '%c' (character), '%
 The function is designed to be more lightweight and easy to extend with new conversion specifiers if needed.
 
 ## Function Signature
-### int _printf(const char =format, ...)
+ `int _printf(const char =format, ...)`
 
 **Parameters**
 `format`: A pointer to the formatting string that contains the text to be written to the output,along with any conversion specifiers.
