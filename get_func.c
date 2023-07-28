@@ -18,6 +18,7 @@ int (*get_func(const char *ch))(va_list args)
 		{"%", print_percent},
 		{"d", print_decimal},
 		{"i", print_integer},
+		{"b", print_bin},
 		{NULL, NULL}
 	};
 

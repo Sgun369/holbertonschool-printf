@@ -24,6 +24,7 @@ int print_string(va_list args);
 int print_percent(va_list args);
 int print_decimal(va_list args);
 int print_integer(va_list args);
+int print_bin(va_list args);
 int (*get_func(const char *ch))(va_list args);
 
 #endif
