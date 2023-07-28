@@ -8,15 +8,11 @@
 
 int print_bin(va_list args)
 {
-	unsigned int tmp;
-	int number = va_arg(args, int);
+	unsigned int tmp, number = va_arg(args, int);
 	int d = 1, len = 0;
 
 	tmp = number;
-	if (number < 0)
-	{
-		return (-1);
-	}
+
 	while (tmp / d > 1)
 	{
 		d *= 2;
