@@ -27,7 +27,10 @@ Return Value
     The _printf function returns the number of characters written to the standard output. In case of an error or invalid input, it returns a negative value.
 
 Format specifiers
+
     The _printf function supports the followig format specifiers:
+
+    %% percent - print a single percent character.
 
     %c Character - prints a single character specified by the corresponding argument.
 
@@ -37,7 +40,7 @@ Format specifiers
 
 
 Authors
-    This custom _printf functions was implemented by [Maaouia Ben Daoued] 
+    This custom _printf functions was implemented by [Maaouia Ben Daoued] and [souhaieb jebali]
 
 SEE ALSO
     printf(3)
