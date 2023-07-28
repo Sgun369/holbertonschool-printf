@@ -20,7 +20,7 @@ The function returns an integer representing the total number of characters prin
 on failure,it returns (-1).
 
 **Supported conversion specifiers**
-*'%c':Prints a single character.
+*'%c':Prints a single character\n.
 *'%s':Prints a string.
 *'%d' and '%i': Prints signed integers.
 *'%%': Prints a percent sign.
