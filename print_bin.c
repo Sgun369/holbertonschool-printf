@@ -18,7 +18,7 @@ int print_bin(va_list args)
 		return (1);
 	}
 
-    while (number > 0)
+	while (number > 0)
 	{
 		buffer[index] = number % 2;
 		number /= 2;
